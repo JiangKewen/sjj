@@ -22,13 +22,14 @@ body {
 }
 
 .crystal {
-  width: 100%;
-  min-height: 500px;
+  width: 442px;
+  min-height: 276px;
   padding: 1px;
   border-radius: 10px;
-  background: url('../../static/moving_item_bg1.jpg') center center no-repeat;
-  background-size: 100%;
+  background: url('../../static/crystal.jpg') center center no-repeat;
+  background-size: cover;
   position: relative;
+  border-radius: 10px;
   box-sizing:border-box;
 }
 .crystal .vague {
