@@ -31,18 +31,6 @@ body {
   position: relative;
   box-sizing:border-box;
 }
-.crystal:after {
-  content: "";
-  width:100%;
-  height:100%;
-  position: absolute;
-  left:0;
-  top:0;
-  background: inherit;
-  /*filter: blur(1px);*/
-  z-index: 1;
-
-}
 .crystal .vague {
   overflow: hidden;
   border-radius: 10px;
@@ -57,7 +45,6 @@ body {
   color: wheat;
   background: hsla(219, 39%, 34%, 0.47) border-box;
   z-index:11;
-  box-shadow:  0 0 10px 6px rgba(0,0,0,.5);
 }
 
 /*vedio*/

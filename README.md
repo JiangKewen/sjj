@@ -5,4 +5,4 @@
 ***
 ***
 不打算搞的很复杂的，简单的一个页面就好，大概就现在的模样（2018年7月18日11:21:00）
-[点击访问](https://jiangkewen.github.io/sjj/)
+[点击访问](https://jiangkewen.github.io/sjj/src/)
