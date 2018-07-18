@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>老子的意大利炮呢</title>
+  <title>青铜局</title>
 </head>
 <body>
   <div>
-    <h2>我家健哥哥就是牛逼，就是帅！</h2>
-    <div class="new">做出了新的修改</div>
+    <h2>我家<span id="myName">健哥哥</span>就是牛逼，就是帅！</h2>
+    <div class="new">做出了新的修改，请尝试点击下面带颜色部分</div>
+    <h2 style="user-select: none;">按川川的要求<span id="myBtn" style="color:tan;">改成川哥哥</span></h2>
   </div>
+  <script>
+    let myBtn = document.querySelector("#myBtn");
+    let myName = document.querySelector("#myName");
+    myBtn.onclick = function() {
+      console.log("%c纯无脑操作，娱乐","color:green;")
+      if(myName.innerHTML == "健哥哥") {
+        myName.innerHTML = "川哥哥";
+      } else {
+        myName.innerHTML = "健哥哥";
+      }
+    }
+  </script>
 </body>
 </html>
