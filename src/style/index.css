@@ -1,6 +1,33 @@
-.action {
+/*reset*/
+
+html, body, h2 {
+  margin: 0;
+  padding: 0;
+  background: url('../../static/mainBg.png') top center no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
   user-select: none;
 }
-#myBtn {
-  color: tan;
+body {
+  position: relative;
+  overflow: hidden;
 }
+
+/*主体框架样式*/
+
+.main_box {
+  width: 78vw;
+  margin: 0 auto;
+  /*background: tan;*/
+}
+
+/*vedio*/
+.dragonSong {
+  position: fixed;
+  bottom: -14px;
+  right: 0;
+  width: 100vw;
+  height: 160px;
+}
+
+

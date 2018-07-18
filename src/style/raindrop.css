@@ -1,0 +1,152 @@
+/*雨滴样式，参照的教程是scss写的，不考虑引人*/
+
+/*外层box*/
+.raindrops {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*雨滴边框box*/
+.raindrops .borders {
+  position: absolute;
+}
+/*雨滴内部box*/
+.raindrops .drops {
+  filter: brightness(1.2);
+  position: absolute;
+}
+
+.border {
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 1px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+  transform: rotateY(0);
+}
+
+.raindrop {
+  position: absolute;
+  border-radius: 100%;
+  background-image: url('../../static/mainBg.png');
+  background-size: 5vw 5vh;
+  background-position: 50%;
+  transform: rotate(180deg) rotateY(0);
+}
+
+.border:nth-child(1),.raindrop:nth-child(1) {
+  left: 18vw;
+  top: 4vh;
+  width: 5px;
+  height: 8px;
+  animation: 2.7530596057s falling 0.2s ease-in infinite;
+}
+.border:nth-child(2),.raindrop:nth-child(2) {
+    left: 49vw;
+    top: 59vh;
+    width: 7px;
+    height: 12px;
+    animation: 2.3652321519s falling 0.16s ease-in infinite;
+}
+.border:nth-child(3),.raindrop:nth-child(3) {
+    left: 79vw;
+    top: 63vh;
+    width: 5px;
+    height: 6px;
+    animation: 2s falling 0.1s ease-in infinite;
+}
+.border:nth-child(4),.raindrop:nth-child(4) {
+    left: 26vw;
+    top: 19vh;
+    width: 7px;
+    height: 8px;
+    animation: 3.3s falling 0.04s ease-in infinite;
+}
+.border:nth-child(5),.raindrop:nth-child(5) {
+    left: 30vw;
+    top: 78vh;
+    width: 16px;
+    height: 16px;
+    animation: 4s falling 0.177s ease-in infinite;
+}
+.border:nth-child(6),.raindrop:nth-child(6) {
+    left: 84vw;
+    top: 13vh;
+    width: 11px;
+    height: 16px;
+    animation: 4.1s falling 0.11s ease-in infinite;
+}
+.border:nth-child(7),.raindrop:nth-child(7) {
+    left: 6vw;
+    top: 75vh;
+    width: 15px;
+    height: 19px;
+    animation: 4.6s falling 0.147s ease-in infinite;
+}
+.border:nth-child(8),.raindrop:nth-child(8) {
+    left: 66vw;
+    top: 53vh;
+    width: 11px;
+    height: 13px;
+    animation: 3s falling 0.126s ease-in infinite;
+}
+.border:nth-child(9),.raindrop:nth-child(9) {
+    left: 51vw;
+    top: 93vh;
+    width: 11px;
+    height: 16px;
+    animation: 2.7s falling 0.05s ease-in infinite;
+}
+.border:nth-child(10),.raindrop:nth-child(10) {
+    left: 72vw;
+    top: 23vh;
+    width: 7px;
+    height: 11px;
+    animation: 2.9s falling 0.11s ease-in infinite;
+}
+.border:nth-child(11),.raindrop:nth-child(11) {
+    left: 2vw;
+    top: 9vh;
+    width: 6px;
+    height: 9px;
+    animation: 1.99s falling 0.081s ease-in infinite;
+}
+.border:nth-child(12),.raindrop:nth-child(12) {
+    left: 10vw;
+    top: 37vh;
+    width: 10px;
+    height: 12px;
+    animation: 2.7s falling 0.124s ease-in infinite;
+}
+.border:nth-child(13),.raindrop:nth-child(13) {
+    left: 13vw;
+    top: 41vh;
+    width: 6px;
+    height: 7px;
+    animation: 1.89s falling 0.031s ease-in infinite;
+}
+.border:nth-child(14),.raindrop:nth-child(14) {
+    left: 59vw;
+    top: 42vh;
+    width: 8px;
+    height: 11px;
+    animation: 2.69s falling 0.181s ease-in infinite;
+}
+.border:nth-child(15),.raindrop:nth-child(15) {
+    left: 95vw;
+    top: 9vh;
+    width: 6px;
+    height: 8px;
+    animation: 2.39s falling 0.071s ease-in infinite;
+}
+
+@keyframes falling {
+    from {}
+    to {
+        transform: translateY(100vh);
+    }
+}
