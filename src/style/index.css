@@ -16,11 +16,16 @@ body {
 /*主体框架样式*/
 
 .main_box {
-  width: 78vw;
+  width: 998px;
   margin: 0 auto;
   /*background: tan;*/
+  position: relative;
 }
 
+.title {
+  position: relative;
+}
+/*模糊层图*/
 .crystal {
   width: 442px;
   min-height: 276px;
@@ -30,8 +35,10 @@ body {
   background-size: cover;
   position: relative;
   border-radius: 10px;
-  box-sizing:border-box;
+  box-sizing: border-box;
+  position: relative;
 }
+/*模糊层字*/
 .crystal .vague {
   overflow: hidden;
   border-radius: 10px;
@@ -45,16 +52,30 @@ body {
   text-align: center;
   color: wheat;
   background: hsla(219, 39%, 34%, 0.47) border-box;
-  z-index:11;
+  z-index: 11;
+}
+.title h1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: '楷体';
+  font-size: 60px;
+  text-shadow: tan 4px 4px;
 }
 
 /*vedio*/
 .dragonSong {
   position: fixed;
   bottom: -14px;
-  right: 0;
-  width: 100vw;
-  height: 60px;
+  right: -262px;
+  /*width: 100vw;*/
+  /*height: 60px;*/
 }
 
-
+/*svg*/
+svg {
+  width: 454px;
+  height: 628px;
+  margin-left: 600px;
+  border: 1px solid tan;
+}
