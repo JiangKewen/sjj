@@ -72,6 +72,16 @@ body {
   /*height: 60px;*/
 }
 
+.ana_box {
+  position: relative;
+}
+.sjj {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 300px;
+}
+
 /*svg*/
 svg {
   width: 454px;
