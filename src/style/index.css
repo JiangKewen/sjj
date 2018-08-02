@@ -83,20 +83,91 @@ body {
 }
 
 .sjj img {
-  animation: sjja 2s infinite;
+  position: absolute;
+  animation: sjja 5s infinite;
+  left: 40px;
+  top: 0;
 }
 @keyframes sjja {
   25% {
     transform: rotate(20deg);
+    top: 20px;
+    left: 20px;
   }
   50% {
     transform: rotate(0deg);
+    top: 40px;
+    left: 40px;
   }
   75% {
     transform: rotate(-20deg);
+    top: 20px;
+    left: 60px;
   }
   100% {
     transform: rotate(0);
+    top: 0;
+    left: 40px;
+  }
+}
+
+.sjj2 {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  width: 200px;
+  height: 400px;
+}
+.sjj2 img {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  animation: sjjb 5s infinite;
+}
+@keyframes sjjb {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 66% 34%;
+  }
+  10% {
+    transform: rotate(36deg);
+    transform-origin: 66% 34%;
+  }
+  20% {
+    transform: rotate(72deg);
+    transform-origin: 66% 34%;
+  }
+  30% {
+    transform: rotate(108deg);
+    transform-origin: 66% 34%;
+  }
+  40% {
+    transform: rotate(144deg);
+    transform-origin: 66% 34%;
+  }
+  50% {
+    transform: rotate(180deg);
+    transform-origin: 66% 34%;
+  }
+  60% {
+    transform: rotate(216deg);
+    transform-origin: 66% 34%;
+  }
+  70% {
+    transform: rotate(252deg);
+    transform-origin: 66% 34%;
+  }
+  80% {
+    transform: rotate(288deg);
+    transform-origin: 66% 34%;
+  }
+  90% {
+    transform: rotate(324deg);
+    transform-origin: 66% 34%;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 66% 34%;
   }
 }
 
