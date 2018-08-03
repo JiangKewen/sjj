@@ -84,6 +84,7 @@
 ### 梯形
     伪元素配合2D3D变换，以及transform-origin: bottom/left/right/top;
 ### 饼图
+    暂无
 ### 投影
     投影可以多次使用。。。
 ### CSS滤镜
@@ -93,7 +94,5 @@
     filter: sepia(1) saturate(4) hue-rotate(295deg);（对图片做滤镜处理）
 
 ---------------------
-|sdf|sdfs|sdfas|
-|sdfas|asdf|asdf|
-|123|1241|4|
+
 

@@ -7,14 +7,16 @@
     html,body {
       margin: 0;
       padding: 0;
-      background: thistle;
+      background: rgba(0,0,0,.1);
+      padding-top: 1px;
+      box-sizing: border-box;
     }
     div.box {
       width: 600px;
       height: 500px;
       border: 10px solid rgba(0,0,0,.1);
       background: tan;
-      margin: 300px auto;
+      margin: 0 auto;
       background-clip: padding-box;
 
       border-radius: 20px;
@@ -24,9 +26,61 @@
       outline: 2px dashed lightgoldenrodyellow;
       outline-offset: -30px;
     }
+    div.color {
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 40px;
+      background: blue;
+    }
+    div.color > div {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      margin: 0;
+      text-align: center;
+      line-height: 200px;
+    }
+    .orange {
+      background: orange;
+    }
+    .lavender {
+      background: lavender;
+    }
+    .aquamarine {
+      background: aquamarine;
+    }
+    .lightgoldenrodyellow {
+      background: lightgoldenrodyellow;
+    }
+    .chocolate {
+      background: chocolate;
+    }
+    .antiquewhite {
+      background: antiquewhite;
+    }
+    .tomato {
+      background: tomato;
+    }
+    .thistle {
+      background: thistle;
+    }
+    .tan {
+      background: tan;
+    }
   </style>
 </head>
 <body>
   <div class="box"></div>
+  <div class="color">
+    <div class="tan">tan</div>
+    <div class="thistle">thistle</div>
+    <div class="tomato">tomato</div>
+    <div class="antiquewhite">antiquewhite</div>
+    <div class="chocolate">chocolate</div>
+    <div class="lightgoldenrodyellow">lightgoldenrodyellow</div>
+    <div class="aquamarine">aquamarine</div>
+    <div class="lavender">lavender</div>
+    <div class="orange">orange</div>
+  </div>
 </body>
 </html>
