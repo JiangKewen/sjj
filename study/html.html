@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+      background: thistle;
+    }
+    div.box {
+      width: 600px;
+      height: 500px;
+      border: 10px solid rgba(0,0,0,.1);
+      background: tan;
+      margin: 300px auto;
+      background-clip: padding-box;
+
+      border-radius: 20px;
+      box-shadow: 0 0 10px 10px tomato,
+                  0 0 10px 10px antiquewhite inset;
+      /*outline: 6px dotted chocolate;*/ /*紧贴在border外面*/
+      outline: 2px dashed lightgoldenrodyellow;
+      outline-offset: -30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
