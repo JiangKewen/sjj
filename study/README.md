@@ -37,11 +37,11 @@
       transparent 0,
       transparent 30px);
     ③background-image: radial-gradient(tan 30%, transparent 0); (径向渐变)
-      background-position: 15px 15px;
+    background-position: 15px 15px;
     
 很多好看的复杂背景图片
-    [一](http://lea.verou.me/css3patterns/#)
-    [二](https://bennettfeely.com/gradients/)
+    [第一个](http://lea.verou.me/css3patterns/#),
+    [第二个](https://bennettfeely.com/gradients/)
 ### 伪随机背景：
     质数的使用：
     background: hsl(20, 40%, 90%);
@@ -56,3 +56,44 @@
     + 内部背景background-clip设为padding-box,
     + background-size: cover;background-origin: border-box;
     + border: 1px solid transparent;
+### 蚂蚁行军图
+    使用动画改变背景图片的background-position,从0->100%。
+    + 使用repeating-linear-gradient
+    + -45deg
+### 圆角
+这个[按钮](http://simurai.com/archive/buttons/)真心好看
+### 平行四边形
+    使用变换的伪元素制作各类东西。。。总之很有用处的伪元素。
+### 菱形图片
+    img {
+     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+     transition: 1s clip-path;
+    }
+    img:hover {
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    啊，现代的 CSS 真是乐趣无穷啊……
+
+### 折角效果
+    使用背景，background-size
+    使用clip-path: polygon();
+
+    在 2D 变形的体系之下，内部的逆向变形可以抵消外部的变形效应）
+
+### 梯形
+    伪元素配合2D3D变换，以及transform-origin: bottom/left/right/top;
+### 饼图
+### 投影
+    投影可以多次使用。。。
+### CSS滤镜
+    filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));（和box-shadow类似，但是没有inset和扩张半径）
+    会给任何非透明的元素打上投影
+    filter: blur() grayscale() drop-shadow();（多个滤镜一起使用）
+    filter: sepia(1) saturate(4) hue-rotate(295deg);（对图片做滤镜处理）
+
+---------------------
+|sdf|sdfs|sdfas|
+|sdfas|asdf|asdf|
+|123|1241|4|
+
