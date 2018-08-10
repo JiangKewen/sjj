@@ -92,6 +92,25 @@
     会给任何非透明的元素打上投影
     filter: blur() grayscale() drop-shadow();（多个滤镜一起使用）
     filter: sepia(1) saturate(4) hue-rotate(295deg);（对图片做滤镜处理）
+### 毛玻璃效果
+    外层div背景 + 内部玻璃div + div::before
+    内部div设置background半透明 + voerflow:hidden
+    内部div::before设置filter:blur(20px) + margin:-30px
+
+    filter: none; 无
+          : frayscale(1); 灰度
+          : sepia(1); 褐色
+          : saturate(.5); 饱和度
+          : hue-rotate(90deg); 色相旋转
+          : invert(1); 反色
+          : opacity(.2); 透明度
+          : brightness(.5); 亮度
+          : contrast(2); 对比度
+          : blur(3px); 模糊 √
+          : drop-shadow(5px 5px 5px #ccc); 阴影
+### 折书角效果
+    使用背景配合伪元素产生的折角效果，emmmmmm
+    加上圆角挺好看的
 
 ---------------------
 
