@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>故障报警</title>
+  <style>
+    .svg {
+      border: 1px solid #eee;
+      box-shadow: 0 0 16px 0 #eee;
+      margin-left: 300px;
+    }
+  </style>
+</head>
+<body>
+  <script src="d3.min.js" charset="utf-8"></script>
+  <script>
+    let num = [85, 35, 15];
+    let color = ["rgba(57, 194, 195, 0.54)", "rgba(128, 195, 57, 0.54)", "#89d085"];
+    let width = 600,
+      height = 400;
+    let data = [
+      {
+        cx: 200,
+        cy: 200,
+        r: 200,
+        stroke: "rgba(57, 194, 195, 0.54)",
+        fill: "transparent"
+      },
+      {
+        cx: 110,
+        cy: 193,
+        r: 100,
+        stroke: "transparent",
+        fill: "rgba(57, 194, 195, 0.54)"
+      },
+      {
+        cx: 210,
+        cy: 296,
+        r: 94,
+        stroke: "transparent",
+        fill: "rgba(128, 195, 57, 0.54)"
+      },
+    ]
+    let svg = d3.select("body")
+      .append("svg")
+      .attr("width",width)
+      .attr("height",height)
+      .attr("class","svg");
+    let circle = svg.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cx", d => { return d.cx; })
+      .attr("cy", d => { return d.cy; })
+      // .attr("r", d => { return 0; })
+      .attr("stroke", d => { return d.stroke; })
+      .attr("fill", d => { return d.fill; })
+      // .transition()
+      // .delay((d, i) => { return i*400; })
+      // .ease("circle")
+      .attr("r", d => { return d.r; })
+      .on("mouseover", function(d,i){ // 不能使用箭头函数。。
+        // console.log("nage", d3.select(this)[0][0].outerHTML)
+        if(d3.select(this)[0][0].outerHTML.indexOf('fill="transparent"') == -1) {
+          d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("r", d.r + 4 + "");          
+        }
+      })
+      .on("mouseout", function(d,i){
+        if(d3.select(this)[0][0].outerHTML.indexOf('fill="transparent"') == -1) {
+          d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("r", d.r - 4 + "");          
+        }
+      });
+
+    // 右上角标注
+    let rect = svg.selectAll("rect")
+      .data(num)
+      .enter()
+      .append("rect")
+      .attr("x", 430)
+      .attr("y", (d, i) => { return 50 * i + 50; })
+      .attr("width", 30)
+      .attr("height", 30)
+      .attr("fill", (d, i) => { return color[i]; });
+
+    // 右上角文字
+    let text1 = svg.selectAll("text")
+      .data(num)
+      .enter()
+      .append("text")
+      .attr("x", 460)
+      .attr("y", (d, i) => { return 50 * i + 50; })
+      .attr("dx", 20)
+      .attr("dy", 20)
+      .text(d => { return d + "个"})
+  </script>
+</body>
+</html>
