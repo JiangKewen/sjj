@@ -1,0 +1,10 @@
+const express = require('express')
+const app = express()
+const indexRouter = require('./route/index')
+const userRouter = require('./route/user.js')
+
+app.use('/user', userRouter)
+app.use('/', indexRouter)
+// app.use("*",)
+console.log("服务器启动")
+app.listen(3000)
